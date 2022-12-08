@@ -1,9 +1,13 @@
 import random
 class Personality:
-    traitList = {'sporty':True} 
-
     def getTrait():
-        pass
+        if (random.random()>.49):
+            return True
+        else:
+            return False
+    traitList = {'sporty':getTrait()} 
+
+    
 
 if __name__ == "__main__":
     per = Personality
