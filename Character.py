@@ -1,2 +1,4 @@
+import Personality
+
 class Character:
-    pass
+    temp = Personality
