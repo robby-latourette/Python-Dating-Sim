@@ -1,14 +1,13 @@
 import Personality
 import names
 import random
-#from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
 class Character:
-    def __init__(self) -> None:
-        pass
+    @abstractmethod
     def getName(self):
         pass
-
+    @abstractmethod
     def getAge(self):
         pass
 

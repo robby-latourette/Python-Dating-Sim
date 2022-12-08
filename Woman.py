@@ -1,4 +1,4 @@
-import Personality
+from Personality import Personality
 import names
 import random
 from Character import Character
@@ -20,7 +20,7 @@ class Woman(Character):
 
 
 if __name__ == "__main__":
-    roberta = Character   
-    print(roberta.per.Personality.traitList)
+    roberta = Woman  
+    print(roberta.per.traitList)
     print(roberta.name)
     print(roberta.age)
