@@ -5,10 +5,13 @@ class Personality:
             return True
         else:
             return False
-    traitList = {'sporty':getTrait()} 
+
+    traitList = {'nerdy':getTrait(),'sporty':getTrait(),'musical':getTrait(),'happy':getTrait(),'adventurous':getTrait(),'urban':getTrait(),
+        'techy':getTrait(),'animalLover':getTrait()} 
 
     
 
 if __name__ == "__main__":
     per = Personality
-    print(per.traitList['sporty'])
+    print(per.traitList)
+    
