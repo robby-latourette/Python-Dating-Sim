@@ -26,14 +26,16 @@ class Simulation:
             name = input("Input name here: ")
         else:
             name = names.get_male_name()
-        user = Player(age, name, rizz, money, strength)
+        self.player = Player(age, name, rizz, money, strength)
         print(f"You will be playing as {name}. You are {age} years old. Good luck out there.")
-        user.status_report()
+        self.player.status_report()
         print("You will receive a status report like this one after each round of speed-dating.")
 
 if __name__ == "__main__":
     game = Simulation()
     game.start()
     while True:
+        
+        game.player.stat_dict['dates'] += 1
         break
     
