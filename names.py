@@ -7945,7 +7945,7 @@ Kaari
 Gita
 Geeta"""
 split_male_names = names.split('\n')
-split_female_names = names.split('\n')
+split_female_names = names2.split('\n')
 def get_male_name():
     return random.choice(split_male_names)
 def get_female_name():
