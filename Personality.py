@@ -6,10 +6,12 @@ class Personality:
         else:
             return False
 
-    traitList = {'nerdy':getTrait(),'sporty':getTrait(),'musical':getTrait(),'happy':getTrait(),'adventurous':getTrait(),'urban':getTrait(),
-        'techy':getTrait(),'animalLover':getTrait()} 
+    traitList = {'nerdy':getTrait(),'sporty':getTrait(),'musical':getTrait(),'happy':getTrait(),
+    'adventurous':getTrait(),'urban':getTrait(),'techy':getTrait(),'animalLover':getTrait()} 
 
-    
+    def getTraitList(self):
+        return self.traitList
+   
 
 if __name__ == "__main__":
     per = Personality
