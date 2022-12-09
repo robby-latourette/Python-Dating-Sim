@@ -10,6 +10,7 @@ class Simulation:
     def display_win():
         pass
     def start():
+        print("Welcome to the Rizz Trainer. You will begin your journey with ")
         age = random.randint(18, 120)
         if input("Would like to input your own name or use a randomly generated name? own/random").lower() == "own":
             name = input("Input name here:")
