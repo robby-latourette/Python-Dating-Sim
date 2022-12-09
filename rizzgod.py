@@ -14,7 +14,7 @@ class Player:
             print('YOU SUCCEEDED!')
             print(f"{category} INCREASED BY 1 POINT!")
             self.stat_dict[category] += 1
-            woman.increaseLove(action)
+            woman.increaseLove(value)
         else:
             print("You were unsuccessful :(")
 
