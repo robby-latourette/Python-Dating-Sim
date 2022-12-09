@@ -9,8 +9,7 @@ class Simulation:
 
     def provide_woman(self):
         pass
-    def display_win(self):
-        pass
+    
     def start(self):
         diff = input("Welcome to the Rizz Trainer. What difficulty are you prepared to play? easy or hard? (Easy mode is recommended for all CS majors) ")
         rizz = 0
@@ -20,7 +19,9 @@ class Simulation:
             rizz = random.randint(0, 20)
             money = random.randint(0, 20)
             strength = random.randint(0, 20)
+
         age = random.randint(18, 120)
+
         if input("Would like to input your own name or use a randomly generated name? own/random: ").lower() == "own":
             name = input("Input name here: ")
         else:
@@ -33,3 +34,6 @@ class Simulation:
 if __name__ == "__main__":
     game = Simulation()
     game.start()
+    while True:
+        break
+    

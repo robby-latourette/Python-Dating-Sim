@@ -18,13 +18,23 @@ class Player:
 
     def status_report(self):
         print("-------------------------------")
+        print("-------------Status------------")
         print("Name:", self.stat_dict['name'])
         print("Age:", self.stat_dict['age'])
         print("Rizz:", self.stat_dict['rizz'])
         print("Strength:", self.stat_dict['strength'])
         print("Total Dates:", self.stat_dict['dates'])
         print('-------------------------------')
-
+        
+    def display_win(self):
+        print("-------------------------------")
+        print("-----------Win Report----------")
+        print("Name:", self.stat_dict['name'])
+        print("Age:", self.stat_dict['age'])
+        print("Rizz:", self.stat_dict['rizz'])
+        print("Strength:", self.stat_dict['strength'])
+        print("Total Dates:", self.stat_dict['dates'])
+        print('-------------------------------')
             
 
 
