@@ -7,10 +7,11 @@ class Player:
 
         self.action_controller = Dialogue
 
-    def perform_action(self, action):
+    def perform_action(self, category, action):
         r_num = random.random(0, 1)
-        success_rate = self.stat_dict[action[1]] + action[2]
+        success_rate = self.stat_dict[category] + action[1]
         if success_rate > r_num:
+            print('YOU SUCCEEDED!')
             print(f"{action[1].upper()} INCREASED BY 1 POINT!")
             self.stat_dict[action[1]] += 1
         else:
@@ -25,7 +26,7 @@ class Player:
         print("Strength:", self.stat_dict['strength'])
         print("Total Dates:", self.stat_dict['dates'])
         print('-------------------------------')
-        
+
     def display_win(self):
         print("-------------------------------")
         print("-----------Win Report----------")
