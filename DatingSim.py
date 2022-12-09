@@ -1,18 +1,20 @@
 import random
 import names
 from rizzgod import Player
-
+from Woman import Woman
+from dialogue import Dialogue
 class Simulation:
     def __init__(self):
         self.player = None
-        self.curr_char = None
+        self.woman = None
+        self.diff = 'easy'
     
     def start(self):
-        diff = input("Welcome to the Rizz Trainer. What difficulty are you prepared to play? easy or hard? (Easy mode is recommended for all CS majors) ")
+        self.diff = input("Welcome to the Rizz Trainer. What difficulty are you prepared to play? easy or hard? (Easy mode is recommended for all CS majors) ")
         rizz = 0
         money = 0
         strength = 0
-        if diff.lower() == 'easy':
+        if self.diff.lower() == 'easy':
             rizz = random.randint(0, 20)
             money = random.randint(0, 20)
             strength = random.randint(0, 20)
@@ -28,16 +30,28 @@ class Simulation:
         self.player.status_report()
         print("You will receive a status report like this one after each round of speed-dating.")
     
-    def present_woman(self, woman):
+    def generate_woman(self):
+        self.woman = Woman()
+        if self.diff == 'easy':
+            self.woman.increaseLove(random.randint(0, 20))
+    def woman_status(self):
         print("---------Current Date----------")
-        print("Name:", woman.get_name())
-        print("Age:", woman.get_age())
-        print("Interest")
+        print("Name:", self.woman.getName())
+        print("Age:", self.woman.getAge())
+        print("Interest", self.woman.getLove())
+        print('-------------------------------')
+
 if __name__ == "__main__":
     game = Simulation()
+    dialogue = Dialogue()
     game.start()
     while True:
-        game.present_woman()
+        game.generate_woman()
+        game.woman_status
+        dialogue.give_actions(game.player)
+        if game.woman.getlove() >= 100:
+            game.player.display_win()
+            break
         game.player.stat_dict['dates'] += 1
         break
     
