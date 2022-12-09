@@ -12,7 +12,7 @@ class Simulation:
     def display_win(self):
         pass
     def start(self):
-        diff = input("Welcome to the Rizz Trainer. What difficulty are you prepared to play? easy or hard? (Easy mode is recommended for all CS majors)")
+        diff = input("Welcome to the Rizz Trainer. What difficulty are you prepared to play? easy or hard? (Easy mode is recommended for all CS majors) ")
         rizz = 0
         money = 0
         strength = 0
