@@ -18,4 +18,4 @@ class Dialogue:
         print('4)', '??????')
         choice = int(input('Choose 1, 2, 3, or 4: ')) - 1
         print(self.actions[choice][0], self.actions[3][1], '% chance')
-        player.perform_action(choices[choice], self.actions[choice][1], woman)
+        player.perform_action(choices[choice], self.actions[choice][1], self.actions[choice][2], woman)

@@ -7,7 +7,7 @@ class Player:
         self.total = 0
         self.action_controller = Dialogue
 
-    def perform_action(self, category, action, woman):
+    def perform_action(self, category, action, value, woman):
         r_num = random.randint(0, 100)
         success_rate = self.stat_dict[category] + action
         if success_rate > r_num:

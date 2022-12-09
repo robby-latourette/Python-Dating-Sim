@@ -50,6 +50,8 @@ if __name__ == "__main__":
 
         game.woman_status()
         print('\n\n')
+        game.player.status_report()
+        print('\n')
         dialogue.give_actions(game.player, game.woman)
         game.player.total += 1
         if game.woman.getLove() >= 300:
@@ -60,6 +62,7 @@ if __name__ == "__main__":
             game.player.stat_dict['dates'] += 1
             game.generate_woman()
             game.player.total = 0
+            print(game.woman.getName, 'got up and left you!!')
         
         if game.player.stat_dict['dates'] > 20:
             print("You are very bad at this.")
