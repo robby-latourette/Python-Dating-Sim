@@ -8,20 +8,21 @@ class Woman(Character):
     def __init__(self) -> None:
         self.name = names.get_female_name()
         self.age = random.randint(17, 45) 
-        self.love = LoveMeter
+        self.love = LoveMeter()
     def getName(self):
         return self.name
     def getAge(self):
         return self.age
     def getlove(self):
-        return self.love
+        return self.love.getLevel()
     def increaseLove(self, amt):
-        self.love += amt
+        self.love.increaseLevel(amt) 
 
 
 
 if __name__ == "__main__":
-    roberta = Woman  
-    print(roberta.per.traitList)
+    roberta = Woman()
+    roberta.increaseLove(5)
+    print(roberta.getlove())
     print(roberta.name)
     print(roberta.age)
