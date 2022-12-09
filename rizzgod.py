@@ -3,7 +3,7 @@ from dialogue import Dialogue
 
 class Player:
     def __init__(self, age, name='Mario', rizz=0, money=0, strength=0):
-        self.stat_dict = {'name':name, "rizz": rizz, "money": money, "dates": 0, "age": 20, "strength": strength}
+        self.stat_dict = {'name':name, "rizz": rizz, "money": money, "dates": 0, "age": age, "strength": strength}
 
         self.action_controller = Dialogue
 
@@ -18,7 +18,6 @@ class Player:
             print("You were unsuccessful :(")
 
     def status_report(self):
-        print("-------------------------------")
         print("-------------Status------------")
         print("Name:", self.stat_dict['name'])
         print("Age:", self.stat_dict['age'])
@@ -28,7 +27,6 @@ class Player:
         print('-------------------------------')
 
     def display_win(self):
-        print("-------------------------------")
         print("-----------Win Report----------")
         print("Name:", self.stat_dict['name'])
         print("Age:", self.stat_dict['age'])

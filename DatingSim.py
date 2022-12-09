@@ -6,9 +6,6 @@ class Simulation:
     def __init__(self):
         self.player = None
         self.curr_char = None
-
-    def provide_woman(self):
-        pass
     
     def start(self):
         diff = input("Welcome to the Rizz Trainer. What difficulty are you prepared to play? easy or hard? (Easy mode is recommended for all CS majors) ")
@@ -30,12 +27,17 @@ class Simulation:
         print(f"You will be playing as {name}. You are {age} years old. Good luck out there.")
         self.player.status_report()
         print("You will receive a status report like this one after each round of speed-dating.")
-
+    
+    def present_woman(self, woman):
+        print("---------Current Date----------")
+        print("Name:", woman.get_name())
+        print("Age:", woman.get_age())
+        print("Interest")
 if __name__ == "__main__":
     game = Simulation()
     game.start()
     while True:
-        
+        game.present_woman()
         game.player.stat_dict['dates'] += 1
         break
     
