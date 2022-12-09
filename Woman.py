@@ -13,7 +13,7 @@ class Woman(Character):
         return self.name
     def getAge(self):
         return self.age
-    def getlove(self):
+    def getLove(self):
         return self.love.getLevel()
     def increaseLove(self, amt):
         self.love.increaseLevel(amt) 

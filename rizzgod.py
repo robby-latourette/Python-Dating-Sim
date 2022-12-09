@@ -3,17 +3,18 @@ from dialogue import Dialogue
 
 class Player:
     def __init__(self, age, name='Mario', rizz=0, money=0, strength=0):
-        self.stat_dict = {'name':name, "rizz": rizz, "money": money, "dates": 0, "age": age, "strength": strength}
-
+        self.stat_dict = {'name':name, "rizz": rizz, "money": money, "dates": 0, "age": age, "strength": strength, 'other': 0}
+        self.total = 0
         self.action_controller = Dialogue
 
-    def perform_action(self, category, action):
-        r_num = random.random(0, 1)
-        success_rate = self.stat_dict[category] + action[1]
+    def perform_action(self, category, action, woman):
+        r_num = random.randint(0, 100)
+        success_rate = self.stat_dict[category] + action
         if success_rate > r_num:
             print('YOU SUCCEEDED!')
-            print(f"{action[1].upper()} INCREASED BY 1 POINT!")
-            self.stat_dict[action[1]] += 1
+            print(f"{category} INCREASED BY 1 POINT!")
+            self.stat_dict[category] += 1
+            woman.increaseLove(action)
         else:
             print("You were unsuccessful :(")
 

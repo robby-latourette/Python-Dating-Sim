@@ -45,13 +45,24 @@ if __name__ == "__main__":
     game = Simulation()
     dialogue = Dialogue()
     game.start()
+    game.generate_woman()
     while True:
-        game.generate_woman()
-        game.woman_status
-        dialogue.give_actions(game.player)
-        if game.woman.getlove() >= 100:
+
+        game.woman_status()
+        print('\n\n')
+        dialogue.give_actions(game.player, game.woman)
+        game.player.total += 1
+        if game.woman.getLove() >= 300:
             game.player.display_win()
             break
-        game.player.stat_dict['dates'] += 1
-        break
+
+        if game.player.total > 10:
+            game.player.stat_dict['dates'] += 1
+            game.generate_woman()
+            game.player.total = 0
+        
+        if game.player.stat_dict['dates'] > 20:
+            print("You are very bad at this.")
+            break
+
     
