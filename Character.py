@@ -4,7 +4,8 @@ import random
 #from abc import ABC, abstractmethod
 
 class Character:
-
+    def __init__(self) -> None:
+        pass
     def getName(self):
         pass
 

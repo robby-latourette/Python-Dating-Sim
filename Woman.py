@@ -1,13 +1,15 @@
 import Personality
 import names
 import random
-import Character
+from Character import Character
 
 class Woman(Character):
     name = names.get_female_name()
     age = random.randint(17, 45)
     per = Personality
     
+    def __init__(self):
+        pass
     def getName(self):
         return self.name
     def getAge(self):
