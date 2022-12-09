@@ -1,7 +1,8 @@
 import random
 from dialogue import Dialogue
+
 class Player:
-    def __init__(self):
+    def __init__(self, age, name):
         self.stat_dict = {"rizz": 0, "money": 0, "dates": 0, "age": 20, "strength": 0}
 
         self.action_controller = Dialogue
@@ -13,7 +14,7 @@ class Player:
             print(f"{action[1].upper()} INCREASED BY 1 POINT!")
         else:
             print("You were unsuccessful :(")
-    
+
             
 
 
